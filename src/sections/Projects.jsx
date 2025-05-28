@@ -31,8 +31,8 @@ const Projects = () => {
   return (
     <section className='c-space my-20'>
         <p className='head-text'>My Work</p>
-        <div className="grid lg:grid-col-2 grid-cols-1 mt-12 gap-5 w-full">
-            <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
+        <div className="grid lg:grid-cols-4 sm:grid-cols-1 mt-12 gap-5">
+            <div className="col-span-2 gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
                 <div className="absolute top-0 right-0">
                     <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" /> 
                 </div>
@@ -53,7 +53,8 @@ const Projects = () => {
                     <button className="arrow-btn" onClick={()=>handleNavigation('next')}><img src="/assets/right-arrow.png" alt="right-arrow" className="w-4 h-4" /></button>
                 </div>
             </div>
-            <div className="border border-black-300 bg-black-200 rounded-lg h-96">
+            </div>
+            <div className="border lg:col-span-2 sm:col-span-4 border-black-300 bg-black-200 rounded-lg">
             <Canvas>
                     <ambientLight intensity={Math.PI}/>
                     <directionalLight position={[10,10,5]}/>
@@ -65,10 +66,8 @@ const Projects = () => {
                         </Suspense>
                     </Center>
                     <OrbitControls enablePan={false} maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} />
-
                 </Canvas>
             </div>   
-            </div>
             
         </div>
     </section>
