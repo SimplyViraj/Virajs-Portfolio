@@ -1,9 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
+
 import { SectionWrapper } from "../hoc";
 
 const Contact = () => {
@@ -52,22 +50,7 @@ const Contact = () => {
         }
       );
   };
-  useGSAP(() => {
-    gsap.from(".gsap-form", {
-      x: -100,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out",
-    });
-
-    gsap.from(".gsap-earth", {
-      x: 100,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out",
-    });
-  }, { scope: sectionRef });
-
+  
   return (
     <div
       ref={sectionRef}
@@ -123,10 +106,6 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-      </div>
-
-      <div className="gsap-earth xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
-        <EarthCanvas />
       </div>
     </div>
   );

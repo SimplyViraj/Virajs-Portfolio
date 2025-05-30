@@ -1,22 +1,22 @@
-import { useState,useEffect,useRef } from 'react';
+import { useState,useRef } from 'react';
 import Globe from "react-globe.gl";
 import Button from '../components/Button';
+import { useGSAP } from '@gsap/react';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
   const globeRef = useRef(null);
 
-  useEffect(() => {
-    if (globeRef.current) {
-     
-      setTimeout(() => {
-        globeRef.current.pointOfView(
-          { lat: 17.385, lng: 78.4867, altitude: 0.6},
-          2000 
-        );
-      }, 10);
-    }
-  }, []);
+useGSAP(() => {
+  if (globeRef.current) {
+    setTimeout(() => {
+      globeRef.current.pointOfView(
+        { lat: 17.385, lng: 78.4867, altitude: 0.6 },
+        2000
+      );
+    }, 10);
+  }
+}, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText('virajtammana@gmail.com');
@@ -31,7 +31,7 @@ const About = () => {
     <section className="c-space my-20">
         <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
             <div className="col-span-1 xl:row-span-3">
-                <div className="grid-container">
+                <div className="grid-container border-anim">
                     <img src="/assets/grid1.png" alt="grid-1" className="w-full sm:h-[276] object-contain" />
                     <div>
                       <p className="grid-headtext">Hi, Im Viraj</p>
