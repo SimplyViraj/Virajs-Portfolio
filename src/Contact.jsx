@@ -1,11 +1,17 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const formRef = useRef();
-  const sectionRef = useRef();
+  const containerRef = useRef();
+  const formCardRef = useRef();
+  const rightBlockRef = useRef();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -23,18 +29,18 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    
+    
     emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      .send('service_7ozuofh','template_m13h8xj',
         {
           from_name: form.name,
-          to_name: "Viraj Tammana",
+          to_name: "Viraj",
           from_email: form.email,
           to_email: "virajtammana@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        'MAPuFKBkbSDEFiFPr'
       )
       .then(
         () => {
@@ -49,66 +55,106 @@ const Contact = () => {
         }
       );
   };
-  
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(formCardRef.current, {
+        opacity: 0,
+        y: 100,
+        duration: 5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      gsap.from(rightBlockRef.current, {
+        opacity: 0,
+        x: 100,
+        duration: 5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div
-      ref={sectionRef}
-      className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden"
+    <section
+      ref={containerRef}
+      className={`sm:px-16 px-5 sm:py-5 py-5 max-w-7xl mx-auto relative z-0 bg-black-200 border rounded-xl`}
     >
-      <div className="gsap-form flex-[0.75] bg-black-100 p-8 rounded-2xl">
-        <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wide">Get in touch</p>
-        <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact.</h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+      <div className="flex xl:flex-row flex-col-reverse gap-5 overflow-hidden">
+        <div
+          ref={formCardRef}
+          className="flex-[0.75] bg-black-200 p-8 rounded-2xl"
         >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
-            <textarea
-              rows={7}
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="What you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
+          <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-white">Get in touch</p>
+          <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact.</h3>
 
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-8"
           >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Your Name</span>
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="What's your god name?"
+                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium"
+              />
+            </label>
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Your Email</span>
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="What's your web address?"
+                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium"
+              />
+            </label>
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Your Message</span>
+              <textarea
+                rows={5}
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="What you want to say?"
+                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium"
+              />
+            </label>
+
+            <button
+              type="submit"
+              className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+          </form>
+        </div>
+        <div
+          ref={rightBlockRef}
+          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] bg-black-200 rounded-2xl flex items-center justify-center text-white text-xl font-bold"
+        >
+          Let’s Connect ⚡
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
 export default Contact;
