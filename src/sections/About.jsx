@@ -43,7 +43,7 @@ useGSAP(() => {
                 </div>
             </div>
             <div className="col-span-1 xl:row-span-3">
-              <div className="grid-container">
+              <div className="grid-container border-anim">
               <img src="/assets/Illustration (2).png" alt="grid-2" className="w-full sm:h-[276] h-fit object-contain" />
                 <div>
                   <p className="grid-headtext">
@@ -56,7 +56,7 @@ useGSAP(() => {
               </div>
             </div>
             <div className="col-span-1 xl:row-span-4">
-              <div className="grid-container">
+              <div className="grid-container border-anim">
                 <div className="rounded-3xl w-full sm:h[-326] h-fit flex justify-center items-center">
                   <Globe
                   ref={globeRef}
@@ -84,7 +84,7 @@ useGSAP(() => {
               </div>
             </div>
             <div className="xl:col-span-2 xl:row-span-3">
-          <div className="grid-container">
+          <div className="grid-container border-anim">
             <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
 
             <div>
@@ -99,7 +99,7 @@ useGSAP(() => {
         </div>
 
         <div className="xl:col-span-1 xl:row-span-2">
-          <div className="grid-container">
+          <div className="grid-container border-anim">
             <img
               src="assets/grid4.png"
               alt="grid-4"
