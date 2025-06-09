@@ -118,7 +118,7 @@ body {
   }
 
   .grid-container {
-    @apply w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-all duration-500 hover:border-white hover:gap-2;  
+    @apply w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-all duration-500 hover:border-white ;  
   }
   .border-anim {
   @apply relative overflow-hidden w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-all duration-500 hover:border-white hover:gap-2;

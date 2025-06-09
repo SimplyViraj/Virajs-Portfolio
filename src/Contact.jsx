@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Hero from "./sections/Hero";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -60,7 +61,7 @@ const Contact = () => {
     const ctx = gsap.context(() => {
       gsap.from(formCardRef.current, {
         opacity: 0,
-        y: 100,
+        y:100,
         duration: 5,
         ease: "power2.out",
         scrollTrigger: {
@@ -89,7 +90,7 @@ const Contact = () => {
   return (
     <section
       ref={containerRef}
-      className={`sm:px-16 px-5 sm:py-5 py-5 max-w-7xl mx-auto relative z-0 bg-black-200 border rounded-xl`}
+      className={`sm:px-16 px-0 mx-0 my-0 sm:py-5 py-5 w-[100%] relative z-0 bg-black-200`}
     >
       <div className="flex xl:flex-row flex-col-reverse gap-5 overflow-hidden">
         <div
@@ -150,7 +151,7 @@ const Contact = () => {
           ref={rightBlockRef}
           className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] bg-black-200 rounded-2xl flex items-center justify-center text-white text-xl font-bold"
         >
-          Let’s Connect ⚡
+          <Hero />
         </div>
       </div>
     </section>

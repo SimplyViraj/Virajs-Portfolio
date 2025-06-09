@@ -37,14 +37,14 @@ useGSAP(() => {
                       <p className="grid-headtext">Hi, Im Viraj</p>
                       <p className="grid-subtext">
                       A Computer Science student with a passion for Software Engineering, Machine Learning and Full Stack Web Development.
-                      Proven ability to learn new technologies quickly and apply them to real-world problems.
+                      Im always looking forward to learn new technologies and test them out like a real engineer
                         </p>
                         </div>
                 </div>
             </div>
             <div className="col-span-1 xl:row-span-3">
               <div className="grid-container border-anim">
-              <img src="/assets/Illustration (2).png" alt="grid-2" className="w-full sm:h-[276] h-fit object-contain" />
+              <img src="/assets/Illustration (2).png" alt="grid-2" className="w-full h-[272px] sm:h-[276] h-fit object-cover" />
                 <div>
                   <p className="grid-headtext">
                     Skills
@@ -60,7 +60,7 @@ useGSAP(() => {
                 <div className="rounded-3xl w-full sm:h[-326] h-fit flex justify-center items-center">
                   <Globe
                   ref={globeRef}
-                   height={326}
+                   height={276}
                    width={326}
                    backgroundColor="rgba(0,0,0,0)"
                    backgroundImageOpacity={0.5}
@@ -85,14 +85,16 @@ useGSAP(() => {
             </div>
             <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container border-anim">
+            <div>
             <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
-
+            </ div>
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
               <p className="grid-subtext">
                 I love solving problems and building things through code. Programming isn&apos;t just my
                 profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
                 I can code in C++,Java,Python and other programming languages and versed in React and other skills.
+                I also have a keen interest in GSAP, Three.js, and other libraries that help me create visually appealing and interactive web applications, like this one right here!!
               </p>
             </div>
           </div>

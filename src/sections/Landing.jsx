@@ -112,7 +112,7 @@ function App() {
                   VI
                 </text>
               </g>
-              
+
             </mask>
           </defs>
           <image
@@ -142,7 +142,7 @@ function App() {
               <span className="font-magnetik text-[60px] flex justify-center py-5">Hey There Employer</span>
               </div>
               <img
-                className="absolute character -bottom-[150%] left-[70%] -translate-x-1/2 scale-[3] rotate-[-20deg]"
+                className="absolute character -bottom-[200%] left-[70%] -translate-x-1/2 scale-[3] rotate-[-60deg]"
                 src="public/assets/viraj.png"
                 alt=""
               />
