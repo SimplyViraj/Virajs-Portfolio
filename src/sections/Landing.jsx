@@ -208,7 +208,7 @@ function App() {
               </div>
               <img
                 className="absolute character -bottom-[200%] left-[70%] -translate-x-1/2 scale-[3] rotate-[-60deg]"
-                src="/assets/viraj.png"
+                src="public/assets/viraj.png"
                 alt=""
               />
             </div>
