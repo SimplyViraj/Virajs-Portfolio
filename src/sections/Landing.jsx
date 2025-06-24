@@ -181,7 +181,7 @@ function App() {
             </mask>
           </defs>
           <image
-            href="/assets/bg.png"
+            href="/assets/bg.PNG"
             width="100%"
             height="100%"
             preserveAspectRatio="xMidYMid slice"
@@ -200,7 +200,7 @@ function App() {
               />
               <img
                 className="absolute scale-[1.6] rotate-[-3deg] bg top-0 left-0 w-full h-full object-cover"
-                src="/assets/bg.png"
+                src="/assets/bg.PNG"
                 alt=""
               />
               <div className="text text-white flex flex-col gap-3 absolute top-[35%] left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
@@ -208,7 +208,7 @@ function App() {
               </div>
               <img
                 className="absolute character -bottom-[200%] left-[70%] -translate-x-1/2 scale-[3] rotate-[-60deg]"
-                src="public/assets/viraj.png"
+                src="/assets/viraj.PNG"
                 alt=""
               />
             </div>
