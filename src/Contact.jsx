@@ -2,12 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Hero from "./sections/Hero";
+import Lanyard from "./components/Lanyard";
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Contact = () => {
+const Contact = () => 
+{
   const formRef = useRef();
   const containerRef = useRef();
   const formCardRef = useRef();
@@ -149,11 +150,11 @@ const Contact = () => {
         </div>
         <div
           ref={rightBlockRef}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] bg-black-200 rounded-2xl flex items-center justify-center text-white text-xl font-bold"
+          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] bg-black-200 rounded-2xl flex items-center justify-center text-white text-xl font-bold z-[10]"
         >
-          <Hero />
+          <Lanyard position={[1,-4,-12]} gravity={[0, -40, 0]} />
         </div>
-      </div>
+      </div> 
     </section>
   );
 };

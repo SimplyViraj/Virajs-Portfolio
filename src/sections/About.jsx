@@ -2,21 +2,28 @@ import { useState,useRef } from 'react';
 import Globe from "react-globe.gl";
 import Button from '../components/Button';
 import { useGSAP } from '@gsap/react';
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
   const globeRef = useRef(null);
+  const containerRef = useRef();
+ useGSAP(() => {
+    ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: "top 20%", // when top of container hits 80% of viewport
+      once: true, 
+      onEnter: () => {
+        
+        globeRef.current.pointOfView(
+          { lat: 17.385, lng: 78.4867, altitude: 0.3 },
+          2000
+        );
 
-useGSAP(() => {
-  if (globeRef.current) {
-    setTimeout(() => {
-      globeRef.current.pointOfView(
-        { lat: 17.385, lng: 78.4867, altitude: 0.6 },
-        2000
-      );
-    }, 10);
-  }
-}, []);
+      }
+    });
+  }, []);
+
 
   const handleCopy = () => {
     navigator.clipboard.writeText('virajtammana@gmail.com');
@@ -29,6 +36,9 @@ useGSAP(() => {
   };
   return (
     <section className="c-space my-20">
+      <div className='text-white text-[25px] mx-5 font-semibold'>
+        About Me
+      </div>
         <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
             <div className="col-span-1 xl:row-span-3">
                 <div className="grid-container border-anim">
@@ -57,7 +67,7 @@ useGSAP(() => {
             </div>
             <div className="col-span-1 xl:row-span-4">
               <div className="grid-container border-anim">
-                <div className="rounded-3xl w-full sm:h[-326] h-fit flex justify-center items-center">
+                <div ref={containerRef} className="rounded-3xl w-full sm:h[-326] h-fit flex justify-center items-center">
                   <Globe
                   ref={globeRef}
                    height={276}
@@ -105,7 +115,7 @@ useGSAP(() => {
             <img
               src="assets/grid4.png"
               alt="grid-4"
-              className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
+              className="w-full md:h-[126px] sm:h-[276px] h-fit object-contain sm:object-top"
             />
 
             <div className="space-y-2">

@@ -8,6 +8,7 @@ export default defineConfig({
     include: ['three', 'three-globe']
   },
   build: {
-    target: 'esnext' 
-  },  
+    target: 'esnext'
+  },
+  assetsInclude: ['**/*.glb']  // ✅ Add this to allow importing .glb files
 })

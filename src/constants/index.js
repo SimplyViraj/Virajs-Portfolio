@@ -20,48 +20,12 @@ export const navLinks = [
       href: '#contact',
     },
   ];
-  
-  export const clientReviews = [
-    {
-      id: 1,
-      name: 'Emily Johnson',
-      position: 'Marketing Director at GreenLeaf',
-      img: 'assets/review1.png',
-      review:
-        'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-    },
-    {
-      id: 2,
-      name: 'Mark Rogers',
-      position: 'Founder of TechGear Shop',
-      img: 'assets/review2.png',
-      review:
-        'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-    },
-    {
-      id: 3,
-      name: 'John Dohsas',
-      position: 'Project Manager at UrbanTech ',
-      img: 'assets/review3.png',
-      review:
-        'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-    },
-    {
-      id: 4,
-      name: 'Ether Smith',
-      position: 'CEO of BrightStar Enterprises',
-      img: 'assets/review4.png',
-      review:
-        'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
-    },
-  ];
-  
   export const myProjects = [
     {
-      title: 'Podcastr - AI Podcast Platform',
-      desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+      title: 'Apple Iphone 15 recreation',
+      desc: 'This is a clone of Apples iPhone 15 Pro website using React.js and TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.js for displaying iPhone 15 Pro models in various colors and shapes',
       subdesc:
-        'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
+        'I made this website using the help of Javascript Mastery entiely for learning purposes to get an introduction on GSAP',
       href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
       texture: '/textures/project/project1.mp4',
       logo: '/assets/project-logo1.png',
@@ -95,10 +59,10 @@ export const navLinks = [
       ],
     },
     {
-      title: 'LiveDoc - Real-Time Google Docs Clone',
-      desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+      title: 'Carpool Management System',
+      desc: 'This Web-based application involves real time tracking of cars through GPS and works on logic of efficient and optimal allocation of vehicles to users taking into account the fuel and pollution constraints by allocation vehicles in a optimal fashion.',
       subdesc:
-        'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
+        'All the cabs involved in this carpooling system are tracked through GPS in head office by the admin cell for safety and security of users.',
       href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
       texture: '/textures/project/project2.mp4',
       logo: '/assets/project-logo2.png',
@@ -132,10 +96,10 @@ export const navLinks = [
       ],
     },
     {
-      title: 'CarePulse - Health Management System',
-      desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+      title: 'Movie Recommendation System',
+      desc: 'The movie recommendation system has become an essential tool in enhancing user experiences on streaming platforms by delivering personalized content suggestions.',
       subdesc:
-        'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
+        'By leveraging user-item interaction data, the system identifies viewing patterns and preferences, enabling it to recommend movies that align with individual tastes.',
       href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
       texture: '/textures/project/project3.mp4',
       logo: '/assets/project-logo3.png',
@@ -148,33 +112,14 @@ export const navLinks = [
       },
       spotlight: '/assets/spotlight3.png',
       tags: [
-        {
-          id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
-        },
-        {
-          id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
-        },
-        {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
+        
       ],
     },
     {
-      title: 'Horizon - Online Banking Platform',
-      desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+      title: 'Custom Event Calender',
+      desc: 'This project was an opportunity to apply advanced React concepts, implement intricate event scheduling logic, and design an intuitive UI.',
       subdesc:
-        'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
+        'Through this project, I enhanced my skills in managing state, optimizing component performance, and designing user-friendly interfaces.',
       href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
       texture: '/textures/project/project4.mp4',
       logo: '/assets/project-logo4.png',
@@ -195,23 +140,13 @@ export const navLinks = [
           name: 'TailwindCSS',
           path: 'assets/tailwindcss.png',
         },
-        {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
       ],
     },
     {
-      title: 'Imaginify - AI Photo Manipulation App',
-      desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
+      title: 'Buxx- A Financial Management App',
+      desc: 'The primary goal of this project is to develop a secure and scalable accounting system using the MERN stack—MongoDB, Express.js, React.js, and Node.js.',
       subdesc:
-        'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
+        'It aims to enable real-time tracking of financial data and tax compliance status while facilitating interdepartmental communication through automated notifications. ',
       href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
       texture: '/textures/project/project5.mp4',
       logo: '/assets/project-logo5.png',
@@ -257,32 +192,4 @@ export const navLinks = [
     };
   };
   
-  export const workExperiences = [
-    {
-      id: 1,
-      name: 'Framer',
-      pos: 'Lead Web Developer',
-      duration: '2022 - Present',
-      title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-      icon: '/assets/framer.svg',
-      animation: 'victory',
-    },
-    {
-      id: 2,
-      name: 'Figma',
-      pos: 'Web Developer',
-      duration: '2020 - 2022',
-      title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-      icon: '/assets/figma.svg',
-      animation: 'clapping',
-    },
-    {
-      id: 3,
-      name: 'Notion',
-      pos: 'Junior Web Developer',
-      duration: '2019 - 2020',
-      title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-      icon: '/assets/notion.svg',
-      animation: 'salute',
-    },
-  ]; 
+  

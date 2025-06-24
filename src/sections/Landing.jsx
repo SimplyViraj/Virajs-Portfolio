@@ -60,21 +60,86 @@ function App() {
     gsap.to(".character", {
       scale: 0.6,
       x: "-50%",
-      bottom: "-25%",
+      bottom: "-30%",
       rotate: 0,
       duration: 2,
       delay: "-.8",
       ease: "Expo.easeInOut",
     });
 
-    gsap.to(".text", {
+  gsap.to(".text", {
       scale: 1,
       rotate: 0,
-      duration: 2,
-      delay: "-.8",
-      ease: "Expo.easeInOut",
-    });
+      duration: 3,
+      delay:"-.8",
+      ease: "expo.inOut",
+      onUpdate: function () {
+        if (this.progress() >= 0.9 && !this._textSwitched) {
+          const penEl = document.querySelector(".pen");
+          const message = "I'm Viraj";
+          penEl.innerHTML = message
+            .split("")
+            .map((char) => {
+              if (char === " ") {
+                return `<span class="letter" style="width: 0.2em;">&nbsp;</span>`;
+              } else {
+                return `<span class="letter">${char}</span>`;
+              }
+            })
+            .join("");
+          gsap.fromTo(
+            ".pen .letter",
+            { scale: 0.5, opacity: 0},
+            {
+              scale: 1,
+              z:10,
+              opacity: 1,
+              duration: 1,
+              ease: "expo.out",
+              stagger: 0.1,
+              onUpdate: function () {
+        if (this.progress() >= 0.9 && !this._textSwitched) {
+          const penEl = document.querySelector(".pen");
+          const message = "Welcome To My Portfolio!";
+          penEl.innerHTML = message
+            .split("")
+            .map((char) => {
+              if (char === " ") {
+                return `<span class="letter" style="width: 0.2em;">&nbsp;</span>`;
+              } else {
+                return `<span class="letter">${char}</span>`;
+              }
+            })
+            .join("");
+          gsap.fromTo(
+            ".pen .letter",
+            { scale: 0.5, opacity: 0 },
+            {
+              scale: 1,
+              x:-200,
+              opacity: 1,
+              duration: 1,
+              ease: "expo.out",
+              stagger: 0.04,
+            }
+          );
+          if (typeof setShowContent === "function") {
+            setShowContent(true);
+          }
 
+          this._textSwitched = true; 
+        }
+      }
+            }
+          );
+          if (typeof setShowContent === "function") {
+            setShowContent(true);
+          }
+
+          this._textSwitched = true; 
+        }
+      }
+    });
     const main = document.querySelector(".main");
 
     main?.addEventListener("mousemove", function (e) {
@@ -139,18 +204,13 @@ function App() {
                 alt=""
               />
               <div className="text text-white flex flex-col gap-3 absolute top-[35%] left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
-              <span className="font-magnetik text-[60px] flex justify-center py-5">Hey There Employer</span>
+              <span className="pen font-magnetik text-[60px] flex justify-center py-3">Hey There!</span>
               </div>
               <img
                 className="absolute character -bottom-[200%] left-[70%] -translate-x-1/2 scale-[3] rotate-[-60deg]"
                 src="public/assets/viraj.png"
                 alt=""
               />
-            </div>
-            <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
-              <div className="flex gap-4">
-
-              </div>
             </div>
           </div>
         </div>
