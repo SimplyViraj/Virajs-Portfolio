@@ -18,6 +18,7 @@
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.96",
     "@types/three": "^0.168.0",
+    "@vercel/speed-insights": "^1.2.0",
     "framer-motion": "^12.6.2",
     "gsap": "^3.12.5",
     "kill-port": "^2.0.1",
