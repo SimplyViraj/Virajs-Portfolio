@@ -90,6 +90,7 @@ const Contact = () =>
 
   return (
     <section
+      id="contact"
       ref={containerRef}
       className={`sm:px-16 px-0 mx-0 my-0 sm:py-5 py-5 w-[100%] relative z-0 bg-black-200`}
     >
@@ -152,7 +153,7 @@ const Contact = () =>
           ref={rightBlockRef}
           className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] bg-black-200 rounded-2xl flex items-center justify-center text-white text-xl font-bold z-[10]"
         >
-          <Lanyard position={[1,-4,-12]} gravity={[0, -40, 0]} />
+          <Lanyard position={[1,-6,-14]} gravity={[0, -40, 0]} />
         </div>
       </div> 
     </section>

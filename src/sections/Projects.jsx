@@ -29,7 +29,7 @@ const Projects = () => {
     }
     useGSAP(()=>{gsap.fromTo('.animatedText',{opacity:0},{opacity:1,duration:1,stagger:0.2,ease:'power2.inOut'});},[selectedProjectIndex]);
   return (
-    <section className='c-space my-20'>
+    <section id="work" className='c-space my-20'>
         <p className='head-text'>My Work</p>
         <div className="grid lg:grid-cols-4 sm:grid-cols-1 mt-12 gap-5">
             <div className="col-span-2 gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">

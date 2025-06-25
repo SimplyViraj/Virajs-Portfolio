@@ -190,7 +190,7 @@ function App() {
         </svg>
       </div>
       {showContent && (
-        <div className="main w-full rotate-[-10deg] scale-[1.7]">
+        <div id="home" className="main w-full rotate-[-10deg] scale-[1.7]">
           <div className="landing overflow-hidden relative w-full h-screen bg-black">
             <div className="imagesdiv relative overflow-hidden w-full h-screen">
               <img

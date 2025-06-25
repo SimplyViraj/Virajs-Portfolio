@@ -35,7 +35,7 @@ const About = () => {
     
   };
   return (
-    <section className="c-space my-20">
+    <section id="about" className="c-space my-20">
       <div className='text-white text-[25px] mx-5 font-semibold'>
         About Me
       </div>
@@ -89,7 +89,9 @@ const About = () => {
                   <p className="grid-subtext">
                   I currently reside in Hyderabad, India, and am open to remote opportunities worldwide. I am also willing to relocate for the right opportunity, depending on the role and organization. I am particularly interested in positions that offer flexibility, innovation, and the ability to collaborate with global teams.
                   </p>
-                  <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+                  <a href="#contact">
+                    <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+                  </a>
                 </div>
               </div>
             </div>
